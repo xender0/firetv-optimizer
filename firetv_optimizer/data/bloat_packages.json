@@ -1,0 +1,121 @@
+{
+  "categories": {
+    "telemetry_metrics": {
+      "name": "Telemetry, Logging & Analytics",
+      "description": "Amazon background diagnostic trackers and metrics loggers",
+      "packages": [
+        "com.amazon.device.crashmanager",
+        "com.amazon.device.logmanager",
+        "com.amazon.dp.logger",
+        "com.amazon.client.metrics",
+        "com.amazon.client.metrics.api",
+        "com.amazon.perfcollection",
+        "com.amazon.tv.fw.metrics",
+        "com.amazon.metrics.api",
+        "com.fireos.usagestats.proxy",
+        "com.amazon.device.metrics",
+        "com.amazon.connectivitydiag",
+        "com.amazon.gloria.graphiq",
+        "com.amazon.adep"
+      ]
+    },
+    "amazon_apps_bloat": {
+      "name": "Amazon Apps & Media Bloat",
+      "description": "Pre-installed media, shopping, photos, music, and promo apps",
+      "packages": [
+        "com.amazon.alexashopping",
+        "com.amazon.shoptv.client",
+        "com.amazon.shoptv.firetv.client",
+        "com.amazon.device.sale.service",
+        "com.amazon.ftvads.deeplinking",
+        "com.amazon.hybridadidservice",
+        "com.amazon.kso.blackbird",
+        "com.amazon.ftv.screensaver",
+        "com.amazon.bueller.photos",
+        "com.amazon.bueller.music",
+        "com.amazon.gamehub",
+        "com.amazon.imdb.tv.android.app",
+        "com.amazon.minitv.android.app",
+        "com.imdb.livingroom.firetv",
+        "com.amazon.tv.livetv",
+        "com.amazon.alexamediaplayer.runtime.ftv",
+        "com.amazon.alexa.externalmediaplayer.fireos",
+        "com.amazon.wha.mediabrowserservice",
+        "com.amazon.tahoe",
+        "com.amazon.ods.kindleconnect"
+      ]
+    },
+    "tutorials_demos": {
+      "name": "Tutorials, Demos & Legal",
+      "description": "First-time setup tutorials, retail demo kiosks, and legal notices",
+      "packages": [
+        "com.amazon.tmm.tutorial",
+        "com.amazon.storm.lightning.tutorial",
+        "com.amazon.kor.demo",
+        "com.amazon.tv.support",
+        "com.amazon.tv.csapp",
+        "com.amazon.tv.releasenotes",
+        "com.amazon.tv.legalresources",
+        "com.amazon.tv.legal.notices",
+        "com.android.inputmethod.pinyin"
+      ]
+    },
+    "unneeded_sync_sharing": {
+      "name": "Background FFS & Whisper Services",
+      "description": "Frustration-Free Setup beaconing and casting services",
+      "packages": [
+        "com.amazon.whisperjoin.wss.wifiprovisioner",
+        "com.amazon.whisperjoin.middleware.np",
+        "com.amazon.tv.ffsprovisioneeclient",
+        "com.amazon.whisperlink.core.android",
+        "com.amazon.whisperplay.service.install",
+        "com.amazon.whisperplay.contracts",
+        "com.amazon.wcast.sink",
+        "com.amazon.awvflingreceiver",
+        "com.amazon.sharingservice.android.client.proxy",
+        "com.amazon.cloud9",
+        "com.amazon.katoch",
+        "com.amazon.naatyam",
+        "com.amazon.hedwig",
+        "com.amazon.aria",
+        "com.amazon.tv.developer.dataservice",
+        "com.amazon.franktvinput",
+        "com.amazon.tv.parentalcontrols"
+      ]
+    },
+    "ota_updates": {
+      "name": "Amazon OTA System Updaters",
+      "description": "Background system firmware auto-updaters",
+      "packages": [
+        "com.amazon.device.software.ota",
+        "com.amazon.device.software.ota.override",
+        "com.amazon.tv.forcedotaupdater.v2",
+        "com.amazon.tv.easyupgrade"
+      ]
+    }
+  },
+  "protected_streaming_apps": [
+    "com.netflix.ninja",
+    "com.stremio.one",
+    "org.smarttube.stable",
+    "com.amazon.tv.leanbacklauncher",
+    "com.wolf.fos5.settings"
+  ],
+  "redundant_apps_candidates": [
+    {
+      "package": "com.amazon.firetv.youtube",
+      "name": "Official YouTube",
+      "reason": "Redundant if SmartTube is installed (saves RAM and removes ads)"
+    },
+    {
+      "package": "com.cor.defsquid",
+      "name": "DefSquid",
+      "reason": "Runs background security scanner threads and notifications"
+    },
+    {
+      "package": "com.estrongs.android.pop.pro",
+      "name": "ES File Explorer Pro",
+      "reason": "Heavy file manager with background daemons; Send Files To TV / Downloader are cleaner"
+    }
+  ]
+}
